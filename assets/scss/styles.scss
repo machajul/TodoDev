@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@mixin fond ($url) {
+    background-image: url($url);
+    background-repeat: no-repeat; 
+    background-position: left center;
+}
+@mixin box ($color) {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 30px;
+    gap : 20px;
+    border: 2px dashed $color;
+}
+@mixin tache($borderColor) {
+    display: flex;
+    padding: 10px;
+    border: 1px solid $borderColor;
+    width: auto;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header {
+    background-color: rgba(128, 0, 128, 0.5);
+}
+.container-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: white;
+    padding: 50px;
+    width: auto;
+    
+    li, a {
+        color: white;
+        text-decoration: none;
+        // list-style-type: none;
+        padding: 15px 0px;
+        
+    }
+
+}
+h1 {
+    padding-bottom: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    flex-wrap: wrap;
+    width: auto;
+
+}
+.mesTaches {
+    @include box(rgb(255, 138, 0));
+
+    .titre1 h2 {
+    @include fond('/assets/img/orange/orange.png');
+    }
+    .tache1 {
+        @include tache(rgb(255, 138, 0));
+    }
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    gap: 10px;
+    margin: auto 0 auto auto;
+}
+.ajouterTache {
+    display: flex;
+    @include box(rgb(133, 182, 255));
+    .titre2 h2 {
+        @include fond('/assets/img/bleu/bleu.png');
+    }
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+label {
+    margin-bottom: 5px;
+}
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(133, 182, 255);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: rgb(133, 182, 255);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: rgb(86, 124, 179);
+}
+.tachesCollectives {
+    @include box(rgb(78, 203, 113));
+    .titre3 h2 {
+        @include fond('/assets/img/vert/vert.png');
+    }
+    .tache3 {
+        @include tache(rgb(78, 203, 113));
+    }
+}
+
+.mesProjets {
+    @include box(rgb(255, 210, 51));
+    .titre4 h2 {
+        @include fond('/assets/img/jaune/jaune.png');
+    }
+    .tache4 {
+        @include tache(rgb(255, 210, 51));
+    }
+}

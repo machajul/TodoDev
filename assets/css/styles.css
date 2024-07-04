@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+header {
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  color: white;
+  padding: 50px;
+  width: auto;
+}
+.container-menu li, .container-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 0px;
+}
+
+h1 {
+  padding-bottom: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.mesTaches {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 30px;
+  gap: 20px;
+  border: 2px dashed rgb(255, 138, 0);
+}
+.mesTaches .titre1 h2 {
+  background-image: url("/assets/img/orange/orange.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.mesTaches .tache1 {
+  display: flex;
+  padding: 10px;
+  border: 1px solid rgb(255, 138, 0);
+  width: auto;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  gap: 10px;
+  margin: auto 0 auto auto;
+}
+
+.ajouterTache {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 30px;
+  gap: 20px;
+  border: 2px dashed rgb(133, 182, 255);
+}
+.ajouterTache .titre2 h2 {
+  background-image: url("/assets/img/bleu/bleu.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(133, 182, 255);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: rgb(133, 182, 255);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(86, 124, 179);
+}
+
+.tachesCollectives {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 30px;
+  gap: 20px;
+  border: 2px dashed rgb(78, 203, 113);
+}
+.tachesCollectives .titre3 h2 {
+  background-image: url("/assets/img/vert/vert.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.tachesCollectives .tache3 {
+  display: flex;
+  padding: 10px;
+  border: 1px solid rgb(78, 203, 113);
+  width: auto;
+}
+
+.mesProjets {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 30px;
+  gap: 20px;
+  border: 2px dashed rgb(255, 210, 51);
+}
+.mesProjets .titre4 h2 {
+  background-image: url("/assets/img/jaune/jaune.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.mesProjets .tache4 {
+  display: flex;
+  padding: 10px;
+  border: 1px solid rgb(255, 210, 51);
+  width: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
